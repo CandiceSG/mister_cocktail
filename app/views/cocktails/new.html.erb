@@ -1,8 +1,8 @@
 <h2>Ajouter un nouveau Cocktail</h2>
 
-<%= form_for(@cocktail) do |f| %>
-  <%= f.label :name %><br />
-  <%= f.text_field :name %>
+<%= simple_form_for(@cocktail, html: { multipart: true }) do |f| %>
+  <%= f.input :name %><br />
+  <%= f.input :image %>
 
   <%= f.submit %>
 <% end %>
